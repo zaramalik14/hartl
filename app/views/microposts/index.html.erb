@@ -1,0 +1,21 @@
+<h1>Microposts</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>User</th>
+  </tr>
+
+  <% @posts.each do |a_post| %>
+  <tr>
+    <td><%= a_post.content %></td>
+    <td><%= a_post.user_id %></td>
+    <td><a href="/microposts/<%= a_post.id %>">Show</a></td>
+    <td><a href="/microposts/edit/<%= a_post.id %>">Edit</a></td>
+    <td><a href="/microposts/destroy/<%= a_post.id %>">Destroy</a></td>
+  </tr>
+  <% end %>
+
+</table>
+
+<a href="/microposts/new">New Micropost</a>

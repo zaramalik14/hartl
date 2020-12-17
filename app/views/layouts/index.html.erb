@@ -1,0 +1,21 @@
+<div style= "color:green"><%= notice %></div>
+
+<h1>Users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+<% User.all.each do |a_user| %>
+  <tr>
+  <td><%= a_user.name %></td>
+  <td><%= a_user.email %></td>
+  <td><a href="/users/<%= a_user.id %>">Show</a></td>
+  <td><a href="/users/edit/<%= a_user.id %>">Edit</a></td>
+  <td><a href="/users/destroy/<%= a_user.id %>">Destroy</a></td>
+  </tr>
+<% end %>
+</table>
+
+<a href="/users/new">New user</a>

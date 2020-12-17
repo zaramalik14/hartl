@@ -1,0 +1,20 @@
+
+
+<h1>Editing User</h1>
+
+<form action="/users/finalize/<%= @user.id %>">
+  <div>
+  <label for="box_name">Name</label>
+  <input id="box_name" name="edited_name" value="<%= @user.name %>">
+  </div>
+
+  <div>
+  <label for="box_email">Email</label>
+  <input id="box_email" name="edited_email" value="<%= @user.email %>">
+  </div>
+
+  <button>Update user</button>
+
+</form>
+<a href="/users/<%= @user.id %>">Show</a>
+<a href="/users">Back</a>
